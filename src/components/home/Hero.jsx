@@ -19,7 +19,7 @@ const Hero = () => {
       </div>
       
       <div className="relative z-10 animate-fadeInUp">
-        <h1 className="text-8xl md:text-7xl font-bold text-white mb-4">
+        <h1 className="text-6xl md:text-7xl font-bold text-white mb-4">
           Hi, I'm <span className="bg-gradient-to-r from-purple-400 via-blue-500 to-cyan-400 bg-clip-text text-transparent animate-gradient-slow">Arav Gautam</span>
         </h1><br></br>
         <p className="text-2xl text-gray-300 mb-2">Computer Science & Engineering Student</p>
