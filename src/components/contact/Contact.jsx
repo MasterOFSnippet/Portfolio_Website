@@ -6,7 +6,8 @@ const Contact = () => {
     { href: 'mailto:working.aravgautam@gmail.com', icon: '📧', label: 'Email' },
     { href: 'https://www.linkedin.com/in/arav-gautam-007swerty2024/', icon: '💼', label: 'LinkedIn' },
     { href: 'https://github.com/MasterOFSnippet/', icon: '💻', label: 'GitHub' },
-    { href: 'https://www.instagram.com/_i_m_arav__/', icon: '📷', label: 'Instagram' }
+    { href: 'https://www.instagram.com/_i_m_arav__/', icon: '📷', label: 'Instagram' },
+    { href: 'https://x.com/_i_m_arav__', icon: '🐦', label: '𝕏 (Twitter)' }
   ];
 
   return (
@@ -23,7 +24,7 @@ const Contact = () => {
           I am always open to discussing new projects, creative ideas, or opportunities to contribute to innovative solutions.
         </p>
         <p className="text-gray-400 mb-8">
-          📍 Satna, Madhya Pradesh, India | 📱 +91 8839248479
+          📍 Satna, Madhya Pradesh, India | 📱 +91 883924847X (DM me on Instagram or 𝕏)
         </p>
         <div className="flex flex-wrap justify-center gap-6">
           {links.map((link, index) => (
