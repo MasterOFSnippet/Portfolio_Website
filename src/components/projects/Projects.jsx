@@ -17,7 +17,7 @@ const Projects = () => {
       description: 'Built a multiplayer chess web application using React, Node.js, Socket.IO, and Chess.js. Implemented real-time gameplay with move validation and socket-based synchronization. Added authentication, room management, and responsive UI for seamless user experience across devices.',
       tags: ['React', 'Node.js', 'Socket.IO', 'Chess.js', 'Real-time'],
       githubLink: 'https://github.com/MasterOFSnippet/Chess-MinorProject',
-      liveLink: null
+      liveLink: 'https://minorproject-chessmaster.vercel.app/'
     },
     {
       emoji: '📦',
