@@ -10,6 +10,7 @@ import LoadingScreen from './components/layout/LoadingScreen';
 
 export default function App() {
   const [loading, setLoading] = useState(true);
+  const [showLoadingScreen, setShowLoadingScreen] = useState(true);
   const [contentVisible, setContentVisible] = useState(false);
 
   useEffect(() => {
@@ -23,9 +24,15 @@ export default function App() {
     }
   }, [loading]);
 
+  const handleLoadingComplete = () => {
+    setLoading(false);
+    // Remove LoadingScreen from DOM after fade out completes
+    setTimeout(() => setShowLoadingScreen(false), 800);
+  };
+
   return (
     <Router>
-      <div className="bg-black">
+      <div className="bg-black min-h-screen">
         <style>{`
           @keyframes float {
             0%, 100% { transform: translateY(0px) translateX(0px); }
@@ -129,14 +136,16 @@ export default function App() {
           }
         `}</style>
         
-        {loading && <LoadingScreen onComplete={() => setLoading(false)} />}
+        {showLoadingScreen && <LoadingScreen onComplete={handleLoadingComplete} />}
         
         <div className={`${contentVisible ? 'content-wrapper' : 'opacity-0'}`}>
           <Navbar />
-          <Hero />
-          <About />
-          <Projects />
-          <Contact />
+          <main className="pt-[72px]">  {/* This creates space for fixed navbar */}
+            <Hero />
+            <About />
+            <Projects />
+            <Contact />
+          </main>
           <Footer />
         </div>
       </div>
