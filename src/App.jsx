@@ -7,6 +7,7 @@ import About from './components/about/About';
 import Projects from './components/projects/Projects';
 import Contact from './components/contact/Contact';
 import LoadingScreen from './components/layout/LoadingScreen';
+//import CustomCursor from './components/ui/CustomCursor';
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -135,7 +136,8 @@ export default function App() {
             animation: fadeInUp 1s ease-out forwards;
           }
         `}</style>
-        
+        {/* Add Custom Cursor */}
+        {/* <CustomCursor /> */}
         {showLoadingScreen && <LoadingScreen onComplete={handleLoadingComplete} />}
         
         <div className={`${contentVisible ? 'content-wrapper' : 'opacity-0'}`}>
